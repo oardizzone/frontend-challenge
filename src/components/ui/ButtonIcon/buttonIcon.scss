@@ -1,0 +1,15 @@
+@import '../../../sass/variables';
+
+.button--icon {
+    color: $buttonSecondaryColor;
+    background: none;
+    border: none;
+
+    &:hover {
+        color: $buttonPrimaryColor;
+    }
+
+    &:active {
+        color: $buttonPrimaryActiveColor;
+    }
+}

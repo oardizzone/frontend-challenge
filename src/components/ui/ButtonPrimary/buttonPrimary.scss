@@ -1,0 +1,19 @@
+@import '../../../sass/variables';
+
+.button--primary {
+    background-color: $buttonPrimaryColor;
+    color: $textButtonColor;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 3rem;
+    border-radius: $buttonBorderRadius;
+
+    &:disabled {
+        background-color: $buttonDisabledColor;
+    }
+
+    &:active {
+        background-color: $buttonPrimaryActiveColor;
+    }
+}

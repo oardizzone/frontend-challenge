@@ -1,0 +1,73 @@
+@import './../../sass/variables';
+@import './../../sass/mixins';
+
+.form {
+    background-color: $contentBgColor;
+    border-radius: $contentBorderRadius;
+    padding: 2rem;
+	@include boxShadow($boxShadowColor);
+
+    &__header {
+        color: $textDarkColor;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    &__input {
+        height: 2.5rem;
+        border-radius: $inputBorderRadius;
+        border: solid $inputBorderColor 1px;
+        width: 100%;
+        padding-right: 17%;
+		padding-left: 1rem;
+        font-size: 1rem;
+		font-weight: normal;
+		color: $textDarkColor;
+
+		&:focus {
+			outline: none;
+		}
+		
+        &__container {
+            width: 24rem;
+            position: relative;
+            &::before {
+                content: attr(data-placeholder);
+                color: $textLight2Color;
+                font-size: 0.75rem;
+                position: absolute;
+                top: 25%;
+                left: 85%
+            }
+        }
+    }
+
+    &__dropdown {
+        width: 24rem;
+        margin: 1rem 0;
+        font-size: 1rem !important;
+		font-weight: normal !important;
+
+        &__control {
+            border-radius: $inputBorderRadius !important;
+            border: 1px solid $inputBorderColor !important;
+			box-shadow: none !important;
+        }
+
+        &__indicator {
+            color: $textDarkColor !important;
+        }
+
+        &__indicator-separator {
+            background: none !important;
+        }
+
+		&__value-container {
+			padding-left: 1rem !important;
+		}
+
+		&__input-container {
+			color: $textDarkColor !important;
+		}
+    }
+}
