@@ -1,0 +1,33 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.card {
+    background-color: $contentBgColor;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1 2 1 1;
+    padding: 2rem;
+    border-radius: $contentBorderRadius;
+    @include boxShadow($boxShadowColor);
+
+    &__information {
+        max-width: 18em;
+    }
+
+    &__header {
+        font-size: 1rem;
+        color: $textDarkColor;
+    }
+
+    &__text {
+        font-size: 1rem;
+        color: $textLight1Color;
+    }
+
+    &__control {
+        display: flex;
+        min-width: 8rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

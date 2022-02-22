@@ -1,3 +1,10 @@
+@import './sass/variables';
+
 .container {
     padding: 2rem 4rem;
+}
+
+.header {
+    margin: 1rem 2rem;
+    color: $textDarkColor;
 }
