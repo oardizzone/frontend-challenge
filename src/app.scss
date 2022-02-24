@@ -1,10 +1,16 @@
 @import './sass/variables';
+@import './sass/mixins';
 
 .container {
-    padding: 2rem 4rem;
+    width: clamp(16rem, 90vw, 70rem);
+    margin: 0 auto
 }
 
 .header {
     margin: 1rem 2rem;
+    font-size: 1.5rem;
     color: $textDarkColor;
+    @include smallerScreen {
+        text-align: center;
+    }
 }

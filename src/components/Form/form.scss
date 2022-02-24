@@ -18,7 +18,7 @@
         border-radius: $inputBorderRadius;
         border: solid $inputBorderColor 1px;
         width: 100%;
-        padding-right: 17%;
+        padding-right: 4rem;
 		padding-left: 1rem;
         font-size: 1rem;
 		font-weight: normal;
@@ -30,20 +30,22 @@
 		
         &__container {
             width: 24rem;
+            max-width: 100%;
             position: relative;
             &::before {
                 content: attr(data-placeholder);
                 color: $textLight2Color;
                 font-size: 0.75rem;
                 position: absolute;
-                top: 25%;
-                left: 85%
+                top: 30%;
+                right: 1.25rem
             }
         }
     }
 
     &__dropdown {
         width: 24rem;
+        max-width: 100%;
         margin: 1rem 0;
         font-size: 1rem !important;
 		font-weight: normal !important;

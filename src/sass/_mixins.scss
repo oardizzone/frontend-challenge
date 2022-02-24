@@ -1,3 +1,9 @@
 @mixin boxShadow($color) {
     box-shadow: 3px 4px 21px $color;
 }
+
+@mixin smallerScreen {
+    @media (max-width: #{$tabletScreenWidth}) {
+        @content;
+    }
+}

@@ -1,4 +1,5 @@
 @import '../../../sass/variables';
+@import '../../../sass/mixins';
 
 .button--primary {
     background-color: $buttonPrimaryColor;
@@ -15,5 +16,9 @@
 
     &:active {
         background-color: $buttonPrimaryActiveColor;
+    }
+
+    @include smallerScreen {
+        width: 100%
     }
 }

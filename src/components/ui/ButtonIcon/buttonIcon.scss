@@ -1,9 +1,14 @@
 @import '../../../sass/variables';
 
-.button--icon {
+.button-icon {
     color: $buttonSecondaryColor;
     background: none;
     border: none;
+
+    &--toggled {
+        @extend .button-icon;
+        color: $buttonPrimaryColor;
+    }
 
     &:hover {
         color: $buttonPrimaryColor;
@@ -11,5 +16,9 @@
 
     &:active {
         color: $buttonPrimaryActiveColor;
+    }
+
+    &:disabled {
+        color: $buttonDisabledColor
     }
 }
