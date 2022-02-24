@@ -1,6 +1,10 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
+%card-section {
+    margin: 0 0.75rem;
+}
+
 .card {
     background-color: $contentBgColor;
     display: flex;
@@ -12,15 +16,17 @@
     min-height: 11rem;
 
     &__information {
-        flex-grow: 0;
-        flex-shrink: 0;
-
+        &--date {
+            @extend %card-section;
+        }
 
         &--csomagpont {
+            @extend %card-section;
             flex-basis: 18rem
         }
 
         &--weight {
+            @extend %card-section;
             @include smallerScreen {
                 display: none;
             }
@@ -46,6 +52,7 @@
         @include smallerScreen {
             flex-direction: column;
             min-width: 0;
+            margin: 1rem 0;
         }
     }
 }

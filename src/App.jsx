@@ -28,7 +28,7 @@ function App() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const newOrder = {
-            id: orders.length,
+            id: editingId !== null ? editingId : orders.length,
             date: formatDate(new Date()),
             csomagpont: formRef.current.address,
             weight: formRef.current.weight
