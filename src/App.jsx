@@ -1,18 +1,19 @@
 import Form from './components/Form/Form';
 import Card from './components/Card/Card';
+import { v4 } from 'uuid';
 import './app.scss';
 import { useState, useRef, useEffect } from 'react';
 import { formatDate } from './helpers';
 
 const testOrders = [
     {
-        id: 0,
+        id: 'd9ccaf71-4f8d-4ec9-93d4-9c230ce78c93',
         date: '2022. 2. 22 - 17:19',
         csomagpont: '1. számú posta - Pécs Légszeszgyár u 12./B',
         weight: 100
     },
     {
-        id: 1,
+        id: 'ea786a54-e6f2-49b6-9688-652b95e30f15',
         date: '2022. 2. 22 - 17:24',
         csomagpont: '2 sz. automata - Bécsi út Tesco',
         weight: 300
@@ -28,7 +29,7 @@ function App() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const newOrder = {
-            id: editingId !== null ? editingId : orders.length,
+            id: editingId !== null ? editingId : v4(),
             date: formatDate(new Date()),
             csomagpont: formRef.current.address,
             weight: formRef.current.weight

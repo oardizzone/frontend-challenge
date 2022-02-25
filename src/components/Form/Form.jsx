@@ -59,7 +59,7 @@ const Form = ({ onSubmit }, ref) => {
     const formInputValid = parseInt(weight) > 0 && address !== '';
 
     return (
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form" onSubmit={onSubmit} data-testid="form">
             <h2 className="form__header">Küldemény súlya</h2>
             <Input className="form__input" placeholder="gramm" onInput={handleWeightInput} value={weight} />
             <h2 className="form__header">Csomagpont</h2>
